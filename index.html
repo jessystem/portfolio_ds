@@ -1,468 +1,448 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ciência de Dados em Ação | Portfólio de Jéssica Gambôa">
-    <title>Portfólio de Dados</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Chart.js para visualizações -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .font-mono {
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .skill-bar {
-            transition: width 1s ease-in-out;
-        }
-        
-        .scroll-smooth {
-            scroll-behavior: smooth;
-        }
-        
-        /* Animação de fade-in */
-        .fade-in {
-            animation: fadeIn 0.8s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Estilo para navegação fixa */
-        .nav-fixed {
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-    </style>
-</head>
-<body class="scroll-smooth bg-gray-50">
-    
-    <!-- Navegação -->
-    <nav class="fixed top-0 w-full z-50 nav-fixed shadow-sm">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold gradient-text">
-                    <i class="fas fa-chart-line mr-2"></i>Portfólio
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition">Sobre</a>
-                    <a href="#projects" class="text-gray-700 hover:text-purple-600 transition">Projetos</a>
-                    <a href="#skills" class="text-gray-700 hover:text-purple-600 transition">Habilidades</a>
-                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition">Contato</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-            <!-- Menu Mobile -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-purple-600 transition">Home</a>
-                <a href="#about" class="block text-gray-700 hover:text-purple-600 transition">Sobre</a>
-                <a href="#projects" class="block text-gray-700 hover:text-purple-600 transition">Projetos</a>
-                <a href="#skills" class="block text-gray-700 hover:text-purple-600 transition">Habilidades</a>
-                <a href="#contact" class="block text-gray-700 hover:text-purple-600 transition">Contato</a>
-            </div>
-        </div>
-    </nav>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Ciência de Dados em Ação | Portfólio de Jéssica Gambôa" />
+<title>Portfólio de Dados</title>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 gradient-bg text-white">
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col items-center text-center fade-in">
-          <div class="mb-8">
-            <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg border-4 border-white">
-              <img src="images/perfil.jpg" alt="Foto de Jéssica Gambôa" class="w-full h-full object-cover">
-            </div>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com" defer></script>
+
+<!-- Chart.js para visualizações -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
+<!-- Font Awesome para ícones -->
+<link 
+  rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" 
+  crossorigin="anonymous"
+/>
+
+<!-- Google Fonts com font-display swap -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+  
+  .skill-bar {
+    transition: width 1s ease-in-out;
+  }
+  
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  
+  /* Animação de fade-in */
+  .fade-in {
+    animation: fadeIn 0.8s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Navegação fixa com backdrop-filter */
+  .nav-fixed {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+</style>
+</head>
+<body class="scroll-smooth bg-gray-50 font-sans">
+
+<header>
+  <nav class="fixed top-0 w-full z-50 nav-fixed shadow-sm" role="navigation" aria-label="Menu principal">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="text-2xl font-bold gradient-text flex items-center" aria-label="Ir para a seção inicial">
+        <i class="fas fa-chart-line mr-2" aria-hidden="true"></i><span>Portfólio</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="text-gray-700 hover:text-purple-600 transition" role="link">Home</a>
+        <a href="#about" class="text-gray-700 hover:text-purple-600 transition" role="link">Sobre</a>
+        <a href="#projects" class="text-gray-700 hover:text-purple-600 transition" role="link">Projetos</a>
+        <a href="#skills" class="text-gray-700 hover:text-purple-600 transition" role="link">Habilidades</a>
+        <a href="#contact" class="text-gray-700 hover:text-purple-600 transition" role="link">Contato</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Abrir menu mobile" aria-controls="mobile-menu" aria-expanded="false">
+        <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3" role="menu" aria-label="Menu móvel">
+      <a href="#home" class="block text-gray-700 hover:text-purple-600 transition" role="menuitem">Home</a>
+      <a href="#about" class="block text-gray-700 hover:text-purple-600 transition" role="menuitem">Sobre</a>
+      <a href="#projects" class="block text-gray-700 hover:text-purple-600 transition" role="menuitem">Projetos</a>
+      <a href="#skills" class="block text-gray-700 hover:text-purple-600 transition" role="menuitem">Habilidades</a>
+      <a href="#contact" class="block text-gray-700 hover:text-purple-600 transition" role="menuitem">Contato</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-20 gradient-bg text-white" aria-label="Seção Inicial">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col items-center text-center fade-in">
+        <div class="mb-8">
+          <div class="w-32 h-32 rounded-full overflow-hidden shadow-lg border-4 border-white" role="img" aria-label="[translate:Foto de Jéssica Gambôa Cavalcante sorrindo]">
+            <img src="images/perfil.jpg" alt="[translate:Foto de Jéssica Gambôa Cavalcante sorrindo]" class="w-full h-full object-cover" />
           </div>
-          <h1 class="text-5xl md:text-6xl font-bold mb-4">
-            Olá, sou estudante de Data Science
-          </h1>
-          <p class="text-xl md:text-2xl mb-8 max-w-2xl">
-            De dados brutos a decisões inteligentes: análise, visualização e machine learning como ferramentas para gerar impacto real.
-          </p>
-          <div class="flex flex-wrap gap-4 justify-center">
-            <a href="#projects" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
-              Ver Projetos
-            </a>
-            <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition">
-              Entre em Contato
-            </a>
-          </div>
-          <div class="mt-12 flex gap-6">
-            <a href="https://github.com/jessystem" target="_blank" class="text-white hover:text-gray-200 transition">
-              <i class="fab fa-github text-3xl"></i>
-            </a>
-            <a href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank" class="text-white hover:text-gray-200 transition">
-              <i class="fab fa-linkedin text-3xl"></i>
-            </a>
-            <a href="mailto:jessicagambs@outlook.com" class="text-white hover:text-gray-200 transition">
-              <i class="fas fa-envelope text-3xl"></i>
-            </a>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">Jéssica Gambôa Cavalcante</h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl">De dados brutos a decisões inteligentes: análise, visualização e [translate:machine learning] como ferramentas para gerar impacto real.</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="#projects" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Ver Projetos</a>
+          <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition">Entre em Contato</a>
+        </div>
+        <div class="mt-12 flex gap-6">
+          <a href="https://github.com/jessystem" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 transition" aria-label="GitHub">
+            <i class="fab fa-github text-3xl" aria-hidden="true"></i>
+          </a>
+          <a href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 transition" aria-label="LinkedIn">
+            <i class="fab fa-linkedin text-3xl" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:jessicagambs@outlook.com" class="text-white hover:text-gray-200 transition" aria-label="Email">
+            <i class="fas fa-envelope text-3xl" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Mim -->
+  <section id="about" class="py-20 bg-white" aria-label="Sobre Mim">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 gradient-text">Sobre Mim</h2>
+        <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Interessada em vagas de estágio ou júnior nas áreas de dados e inovação.</h3>
+          <p class="text-gray-600 mb-4">Em processo de transição da área administrativa para Ciência de Dados, estou cursando o segundo semestre da graduação na FIAP. Sou movida pela curiosidade e pela vontade de extrair valor dos dados e convertê-los em conhecimento útil.</p>
+          <p class="text-gray-600 mb-4">Tenho experiência com Python, SQL, Looker Studio e diversas bibliotecas de análise de dados. Meu objetivo é usar dados para resolver problemas complexos e gerar valor para negócios.</p>
+          <div class="flex flex-wrap gap-3 mt-6">
+            <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <i class="fas fa-chart-bar mr-2" aria-hidden="true"></i>Análise de Dados
+            </span>
+            <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <i class="fas fa-robot mr-2" aria-hidden="true"></i>[translate:Machine Learning]
+            </span>
+            <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <i class="fas fa-chart-line mr-2" aria-hidden="true"></i>Visualização
+            </span>
+            <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <i class="fas fa-database mr-2" aria-hidden="true"></i>SQL & Databases
+            </span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Sobre Mim -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 gradient-text">Sobre Mim</h2>
-                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+  <!-- Projetos -->
+  <section id="projects" class="py-20 bg-gray-50" aria-label="Projetos em Destaque">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 gradient-text">Projetos em Destaque</h2>
+        <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Confira alguns dos meus projetos de análise de dados e [translate:machine learning]:</p>
+      </div>
+
+      <div id="projects-container" class="max-w-3xl mx-auto space-y-4">
+        <article class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition" role="region" aria-labelledby="proj1">
+          <h3 id="proj1" class="text-purple-600 font-semibold hover:underline text-lg">
+            <a href="https://github.com/jessystem/analise_covid" target="_blank" rel="noopener noreferrer">Projeto 1 - Análise de Dados do COVID-19 - Prova de Estatística (1º Semestre) - FIAP</a>
+          </h3>
+        </article>
+        <article class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition" role="region" aria-labelledby="proj2">
+          <h3 id="proj2" class="text-purple-600 font-semibold hover:underline text-lg">
+            <a href="https://github.com/jessystem/GS_FINAL" target="_blank" rel="noopener noreferrer">Projeto 2 - Projeto Global Solutions: Desvendando Desastres e Combatendo Fake News em SP</a>
+          </h3>
+        </article>
+        <article class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition" role="region" aria-labelledby="proj3">
+          <h3 id="proj3" class="text-purple-600 font-semibold hover:underline text-lg">
+            <a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" target="_blank" rel="noopener noreferrer">Projeto 3 - Clickbus Final FIAP 2025 - 2º Semestre</a>
+          </h3>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="skills" class="py-20 bg-gray-50" aria-label="Habilidades Técnicas">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 gradient-text">Habilidades Técnicas</h2>
+        <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto" role="list">
+        <!-- Linguagens de Programação -->
+        <section class="bg-white p-8 rounded-2xl shadow-lg" role="listitem" aria-label="Linguagens de Programação">
+          <h3 class="text-xl font-bold mb-6 flex items-center">
+            <i class="fas fa-code text-purple-600 mr-3" aria-hidden="true"></i>Linguagens de Programação
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Python</span>
+                <span class="text-purple-600">90%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em Python">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+              </div>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">Interessada em vagas de estágio ou júnior nas áreas de dados e inovação.</h3>
-                    <p class="text-gray-600 mb-4">
-                        Em processo de transição da área administrativa para Ciência de Dados, estou cursando o segundo semestre da graduação na FIAP. Sou movida pela curiosidade e pela vontade de extrair valor dos dados e convertê-los em conhecimento útil.
-                    </p>
-                    <p class="text-gray-600 mb-4">
-                        Tenho experiência com Python, SQL, Looker Studio e diversas bibliotecas de análise de dados. 
-                        Meu objetivo é usar dados para resolver problemas complexos e gerar valor para negócios.
-                    </p>
-                    <div class="flex flex-wrap gap-3 mt-6">
-                        <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
-                            <i class="fas fa-chart-bar mr-2"></i>Análise de Dados
-                        </span>
-                        <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
-                            <i class="fas fa-robot mr-2"></i>[translate:Machine Learning]
-                        </span>
-                        <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
-                            <i class="fas fa-chart-line mr-2"></i>Visualização
-                        </span>
-                        <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
-                            <i class="fas fa-database mr-2"></i>SQL & Databases
-                        </span>
-                    </div>
-                </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">SQL</span>
+                <span class="text-purple-600">90%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em SQL">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+              </div>
             </div>
+          </div>
+        </section>
+
+        <!-- Ferramentas & Frameworks -->
+        <section class="bg-white p-8 rounded-2xl shadow-lg" role="listitem" aria-label="Ferramentas e Frameworks">
+          <h3 class="text-xl font-bold mb-6 flex items-center">
+            <i class="fas fa-tools text-purple-600 mr-3" aria-hidden="true"></i>Ferramentas & Frameworks
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Pandas & NumPy</span>
+                <span class="text-purple-600">95%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em Pandas & NumPy">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Scikit-learn</span>
+                <span class="text-purple-600">70%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em Scikit-learn">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 70%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Looker Studio</span>
+                <span class="text-purple-600">90%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em Looker Studio">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Banco de Dados -->
+        <section class="bg-white p-8 rounded-2xl shadow-lg" role="listitem" aria-label="Banco de Dados">
+          <h3 class="text-xl font-bold mb-6 flex items-center">
+            <i class="fas fa-database text-purple-600 mr-3" aria-hidden="true"></i>Banco de Dados
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">SQLITE</span>
+                <span class="text-purple-600">80%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em SQLITE">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 80%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Oracle</span>
+                <span class="text-purple-600">95%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em Oracle">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Soft Skills -->
+        <section class="bg-white p-8 rounded-2xl shadow-lg" role="listitem" aria-label="Competências">
+          <h3 class="text-xl font-bold mb-6 flex items-center">
+            <i class="fas fa-lightbulb text-purple-600 mr-3" aria-hidden="true"></i>Competências
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Análise Estatística</span>
+                <span class="text-purple-600">95%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em Análise Estatística">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Data Storytelling</span>
+                <span class="text-purple-600">90%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em Data Storytelling">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Resolução de Problemas</span>
+                <span class="text-purple-600">95%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em Resolução de Problemas">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Comunicação</span>
+                <span class="text-purple-600">90%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nível de proficiência em Comunicação">
+                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contact" class="py-20 bg-white" aria-label="Contato">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 gradient-text">Entre em Contato</h2>
+        <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Interessado em colaborar ou discutir projetos de dados? Vamos conversar!</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto" role="form" aria-labelledby="contactFormTitle">
+        <div>
+          <h3 id="contactFormTitle" class="text-2xl font-bold mb-6">Informações de Contato</h3>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-purple-100 p-4 rounded-lg mr-4">
+                <i class="fas fa-envelope text-purple-600 text-xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Email</h4>
+                <a href="mailto:jessicagambs@outlook.com" class="text-gray-600 hover:text-purple-600">jessicagambs@outlook.com</a>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-purple-100 p-4 rounded-lg mr-4">
+                <i class="fas fa-phone text-purple-600 text-xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Telefone</h4>
+                <a href="tel:+5511959372102" class="text-gray-600 hover:text-purple-600">+55 (11) 95937-2102</a>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-purple-100 p-4 rounded-lg mr-4">
+                <i class="fas fa-map-marker-alt text-purple-600 text-xl" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Localização</h4>
+                <p class="text-gray-600">São Paulo, Brasil</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="font-semibold mb-4">Redes Sociais</h4>
+            <div class="flex gap-4">
+              <a href="https://github.com/jessystem" target="_blank" rel="noopener noreferrer" class="bg-gray-100 p-4 rounded-lg hover:bg-purple-100 transition" aria-label="GitHub">
+                <i class="fab fa-github text-2xl text-gray-700 hover:text-purple-600" aria-hidden="true"></i>
+              </a>
+              <a href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank" rel="noopener noreferrer" class="bg-gray-100 p-4 rounded-lg hover:bg-purple-100 transition" aria-label="LinkedIn">
+                <i class="fab fa-linkedin text-2xl text-gray-700 hover:text-purple-600" aria-hidden="true"></i>
+              </a>
+              <a href="https://kaggle.com/jessystem" target="_blank" rel="noopener noreferrer" class="bg-gray-100 p-4 rounded-lg hover:bg-purple-100 transition" aria-label="Kaggle">
+                <i class="fab fa-kaggle text-2xl text-gray-700 hover:text-purple-600" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Projetos -->
-    <section id="projects" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 gradient-text">Projetos em Destaque</h2>
-                <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Confira alguns dos meus projetos de análise de dados e machine learning: 
-                </p>
+        <div>
+          <form id="contact-form" class="space-y-6" aria-label="Formulário de contato">
+            <div>
+              <label for="name" class="block font-semibold mb-2">Nome</label>
+              <input id="name" type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" />
             </div>
-
-            <div id="projects-container" class="max-w-3xl mx-auto space-y-4">
-                <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-                    <a href="https://github.com/jessystem/analise_covid" target="_blank" class="text-purple-600 font-semibold hover:underline">
-                        Projeto 1 - Análise de Dados do COVID-19 - Prova de Estatística (1º Semestre) - FIAP
-                    </a>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-                    <a href="https://github.com/jessystem/GS_FINAL" target="_blank" class="text-purple-600 font-semibold hover:underline">
-                        Projeto 2 - Projeto Global Solutions: Desvendando Desastres e Combatendo Fake News em SP
-                    </a>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
-                    <a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" target="_blank" class="text-purple-600 font-semibold hover:underline">
-                        Projeto 3 - Clickbus Final FIAP 2025 - 2º Semestre
-                    </a>
-                </div>
-                <!-- Adicione mais projetos conforme necessário -->
+            <div>
+              <label for="email" class="block font-semibold mb-2">Email</label>
+              <input id="email" type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" />
             </div>
+            <div>
+              <label for="subject" class="block font-semibold mb-2">Assunto</label>
+              <input id="subject" type="text" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" />
+            </div>
+            <div>
+              <label for="message" class="block font-semibold mb-2">Mensagem</label>
+              <textarea id="message" name="message" required rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"></textarea>
+            </div>
+            <button type="submit" class="w-full gradient-bg text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+              <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i>Enviar Mensagem
+            </button>
+          </form>
+          <div id="form-message" class="mt-4 hidden"></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <!-- Habilidades -->
-    <section id="skills" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 gradient-text">Habilidades Técnicas</h2>
-                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Linguagens de Programação -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <h3 class="text-xl font-bold mb-6 flex items-center">
-                        <i class="fas fa-code text-purple-600 mr-3"></i>
-                        Linguagens de Programação
-                    </h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Python</span>
-                                <span class="text-purple-600">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">SQL</span>
-                                <span class="text-purple-600">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Ferramentas & Frameworks -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <h3 class="text-xl font-bold mb-6 flex items-center">
-                        <i class="fas fa-tools text-purple-600 mr-3"></i>
-                        Ferramentas & Frameworks
-                    </h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Pandas & NumPy</span>
-                                <span class="text-purple-600">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Scikit-learn</span>
-                                <span class="text-purple-600">70%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Looker Studio</span>
-                                <span class="text-purple-600">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<footer class="bg-gray-900 text-white py-8" role="contentinfo">
+  <div class="container mx-auto px-6 text-center">
+    <p>&copy; 2024 Portfólio de Dados. Todos os direitos reservados.</p>
+    <p class="text-gray-400 mt-2">Desenvolvido com <i class="fas fa-heart text-red-500" aria-hidden="true"></i> e dados</p>
+  </div>
+</footer>
 
-                <!-- Banco de Dados -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <h3 class="text-xl font-bold mb-6 flex items-center">
-                        <i class="fas fa-database text-purple-600 mr-3"></i>
-                        Banco de Dados
-                    </h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">SQLITE</span>
-                                <span class="text-purple-600">80%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Oracle</span>
-                                <span class="text-purple-600">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Soft Skills -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <h3 class="text-xl font-bold mb-6 flex items-center">
-                        <i class="fas fa-lightbulb text-purple-600 mr-3"></i>
-                        Competências
-                    </h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Análise Estatística</span>
-                                <span class="text-purple-600">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Data Storytelling</span>
-                                <span class="text-purple-600">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Resolução de Problemas</span>
-                                <span class="text-purple-600">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Comunicação</span>
-                                <span class="text-purple-600">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 0%" data-width="90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 gradient-text">Entre em Contato</h2>
-                <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Interessado em colaborar ou discutir projetos de dados? Vamos conversar!
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-purple-100 p-4 rounded-lg mr-4">
-                                <i class="fas fa-envelope text-purple-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Email</h4>
-                                <a href="mailto:jessicagambs@outlook.com" class="text-gray-600 hover:text-purple-600">jessicagambs@outlook.com</a>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-purple-100 p-4 rounded-lg mr-4">
-                                <i class="fas fa-phone text-purple-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Telefone</h4>
-                                <a href="tel:+5511959372102" class="text-gray-600 hover:text-purple-600">+55 (11) 95937-2102</a>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-purple-100 p-4 rounded-lg mr-4">
-                                <i class="fas fa-map-marker-alt text-purple-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Localização</h4>
-                                <p class="text-gray-600">São Paulo, Brasil</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <h4 class="font-semibold mb-4">Redes Sociais</h4>
-                        <div class="flex gap-4">
-                            <a href="https://github.com/jessystem" target="_blank" class="bg-gray-100 p-4 rounded-lg hover:bg-purple-100 transition">
-                                <i class="fab fa-github text-2xl text-gray-700 hover:text-purple-600"></i>
-                            </a>
-                            <a href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank" class="bg-gray-100 p-4 rounded-lg hover:bg-purple-100 transition">
-                                <i class="fab fa-linkedin text-2xl text-gray-700 hover:text-purple-600"></i>
-                            </a>
-                            <a href="https://kaggle.com/jessystem" target="_blank" class="bg-gray-100 p-4 rounded-lg hover:bg-purple-100 transition">
-                                <i class="fab fa-kaggle text-2xl text-gray-700 hover:text-purple-600"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <form id="contact-form" class="space-y-6">
-                        <div>
-                            <label class="block font-semibold mb-2">Nome</label>
-                            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
-                        </div>
-                        <div>
-                            <label class="block font-semibold mb-2">Email</label>
-                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
-                        </div>
-                        <div>
-                            <label class="block font-semibold mb-2">Assunto</label>
-                            <input type="text" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
-                        </div>
-                        <div>
-                            <label class="block font-semibold mb-2">Mensagem</label>
-                            <textarea name="message" required rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"></textarea>
-                        </div>
-                        <button type="submit" class="w-full gradient-bg text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition">
-                            <i class="fas fa-paper-plane mr-2"></i>Enviar Mensagem
-                        </button>
-                    </form>
-                    <div id="form-message" class="mt-4 hidden"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 Portfólio de Dados. Todos os direitos reservados.</p>
-            <p class="text-gray-400 mt-2">Desenvolvido com <i class="fas fa-heart text-red-500"></i> e dados</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
