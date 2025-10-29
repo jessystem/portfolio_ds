@@ -4,13 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jéssica Gambôa | Ciência de Dados</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #1a1a1a;
+      --text-light: #333;
+      --text-dark: #f9f9f9;
+      --accent: #7c3aed;
+    }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
     }
     .section {
       padding: 4rem 1rem;
@@ -18,21 +30,8 @@
       transform: translateY(20px);
       animation: fadeIn 1s ease-out forwards;
     }
-    .title {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    .subtitle {
-      font-size: 1.2rem;
-      color: #666;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
     .card {
-      background: #fff;
-      border: 1px solid #e5e5e5;
+      background: white;
       border-radius: 0.75rem;
       padding: 1.5rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -49,7 +48,7 @@
     }
     .progress-bar {
       height: 100%;
-      background: #7c3aed;
+      background: var(--accent);
       animation: growBar 1.5s ease-out forwards;
       width: 0;
     }
@@ -64,74 +63,75 @@
         width: var(--target-width);
       }
     }
-    button {
-      transition: transform 0.2s ease;
-    }
-    button:hover {
-      transform: scale(1.02);
-    }
-    button:active {
-      transform: scale(0.98);
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      z-index: 1000;
     }
   </style>
 </head>
 <body>
+
+  <!-- Modo escuro -->
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌗 Modo</button>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 
   <!-- Header -->
   <header class="section text-center">
     <img src="images/perfil.JPG" alt="Foto de Jéssica" class="w-24 h-24 rounded-full mx-auto mb-4" />
     <h1 class="text-3xl font-bold">Jéssica Gambôa Cavalcante</h1>
     <p class="text-gray-600 mt-2">Estudante de Ciência de Dados | FIAP</p>
-    <div class="mt-4 flex justify-center gap-4">
-      <a href="https://github.com/jessystem" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank">LinkedIn</a>
-      <a href="mailto:jessicagambs@outlook.com">Email</a>
+    <div class="mt-4 flex justify-center gap-4 text-purple-600">
+      <a href="https://github.com/jessystem" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="mailto:jessicagambs@outlook.com"><i class="fas fa-envelope"></i> Email</a>
     </div>
   </header>
 
   <!-- Sobre Mim -->
   <section class="section">
-    <h2 class="title">Sobre Mim</h2>
-    <p class="subtitle">Transição da área administrativa para o universo dos dados.</p>
-    <div class="max-w-3xl mx-auto text-center text-gray-700">
-      <p>Sou apaixonada por tecnologia e pelo poder dos dados. Após 6 anos na área administrativa, decidi migrar para Ciência de Dados, onde posso unir minha experiência com novas habilidades analíticas.</p>
-    </div>
+    <h2 class="text-2xl font-bold mb-4 text-center">Sobre Mim</h2>
+    <p class="max-w-3xl mx-auto text-center text-gray-700">Sou apaixonada por tecnologia e pelo poder dos dados. Após 6 anos na área administrativa, decidi migrar para Ciência de Dados, onde posso unir minha experiência com novas habilidades analíticas.</p>
   </section>
 
   <!-- Projetos -->
   <section class="section bg-white">
-    <h2 class="title">Projetos</h2>
+    <h2 class="text-2xl font-bold mb-4 text-center">Projetos</h2>
     <div class="grid gap-6 max-w-3xl mx-auto">
-      <div class="card">
-        <a href="https://github.com/jessystem/analise_covid" target="_blank" class="text-purple-600 font-semibold">Análise COVID-19 — Estatística FIAP</a>
-      </div>
-      <div class="card">
-        <a href="https://github.com/jessystem/GS_FINAL" target="_blank" class="text-purple-600 font-semibold">Global Solutions — Fake News & Desastres SP</a>
-      </div>
-      <div class="card">
-        <a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" target="_blank" class="text-purple-600 font-semibold">Clickbus — Projeto Final 2º Semestre</a>
-      </div>
+      <div class="card"><a href="https://github.com/jessystem/analise_covid" target="_blank" class="text-purple-600 font-semibold">📊 Análise COVID-19 — Estatística FIAP</a></div>
+      <div class="card"><a href="https://github.com/jessystem/GS_FINAL" target="_blank" class="text-purple-600 font-semibold">📰 Global Solutions — Fake News & Desastres SP</a></div>
+      <div class="card"><a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" target="_blank" class="text-purple-600 font-semibold">🚌 Clickbus — Projeto Final 2º Semestre</a></div>
     </div>
   </section>
 
   <!-- Habilidades -->
   <section class="section">
-    <h2 class="title">Habilidades</h2>
+    <h2 class="text-2xl font-bold mb-4 text-center">Habilidades</h2>
     <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
       <div class="card">
-        <h3 class="font-semibold mb-2">Python</h3>
+        <h3 class="font-semibold mb-2">🐍 Python</h3>
         <div class="progress"><div class="progress-bar" style="--target-width: 90%"></div></div>
       </div>
       <div class="card">
-        <h3 class="font-semibold mb-2">SQL</h3>
+        <h3 class="font-semibold mb-2">🗄️ SQL</h3>
         <div class="progress"><div class="progress-bar" style="--target-width: 90%"></div></div>
       </div>
       <div class="card">
-        <h3 class="font-semibold mb-2">Pandas & NumPy</h3>
+        <h3 class="font-semibold mb-2">📊 Pandas & NumPy</h3>
         <div class="progress"><div class="progress-bar" style="--target-width: 95%"></div></div>
       </div>
       <div class="card">
-        <h3 class="font-semibold mb-2">Scikit-learn</h3>
+        <h3 class="font-semibold mb-2">🤖 Scikit-learn</h3>
         <div class="progress"><div class="progress-bar" style="--target-width: 70%"></div></div>
       </div>
     </div>
@@ -139,11 +139,11 @@
 
   <!-- Contato -->
   <section class="section bg-white">
-    <h2 class="title">Contato</h2>
+    <h2 class="text-2xl font-bold mb-4 text-center">Contato</h2>
     <div class="max-w-xl mx-auto text-center">
-      <p class="mb-4">📍 São Paulo, Brasil</p>
-      <p class="mb-4">📧 <a href="mailto:jessicagambs@outlook.com" class="text-purple-600">jessicagambs@outlook.com</a></p>
-      <p class="mb-4">📞 <a href="tel:+5511959372102" class="text-purple-600">+55 (11) 95937-2102</a></p>
+      <p class="mb-2">📍 São Paulo, Brasil</p>
+      <p class="mb-2">📧 <a href="mailto:jessicagambs@outlook.com" class="text-purple-600">jessicagambs@outlook.com</a></p>
+      <p class="mb-2">📞 <a href="tel:+5511959372102" class="text-purple-600">+55 (11) 95937-2102</a></p>
     </div>
   </section>
 
