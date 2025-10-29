@@ -188,56 +188,6 @@
       <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
       <p class="text-gray-600 max-w-2xl mx-auto">Aqui está uma visão geral dos tipos de projetos que desenvolvi até agora.</p>
     </div>
-    <div class="max-w-3xl mx-auto">
-      <canvas id="projectChart" width="400" height="300"></canvas>
-    </div>
-  </div>
-</section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const ctx = document.getElementById('projectChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Machine Learning', 'Visualização', 'SQL & Databases', 'Análise Estatística'],
-        datasets: [{
-          label: 'Projetos por Tema',
-          data: [3, 2, 4, 2],
-          backgroundColor: [
-            '#667eea',
-            '#764ba2',
-            '#a78bfa',
-            '#c084fc'
-          ],
-          borderRadius: 6
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            display: false
-          },
-          tooltip: {
-            backgroundColor: '#764ba2',
-            titleColor: '#fff',
-            bodyColor: '#fff'
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              stepSize: 1
-            }
-          }
-        }
-      }
-    });
-  });
-</script>
-
   <!-- Projetos -->
   <section id="projects" class="py-20 bg-gray-50" aria-label="Projetos em Destaque">
     <div class="container mx-auto px-6">
