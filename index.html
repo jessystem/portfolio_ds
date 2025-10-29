@@ -1,114 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Portfólio de Dados | Jéssica Gambôa" />
-<title>Portfólio de Dados</title>
-<script src="https://cdn.tailwindcss.com" defer></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-<style>
-  body { font-family: 'Inter', sans-serif; }
-  .minimal-border { border-color: #e5e7eb; }
-  .section-title { color: #18181b; }
-  .link-minimal { color: #6366f1; transition: color 0.2s; }
-  .link-minimal:hover { color: #1e293b; text-decoration: underline; }
-  .bg-hero { background: #fff; }
-  .avatar {
-      width: 96px; height: 96px; border-radius: 50%; object-fit: cover;
-      border: 2px solid #fff; box-shadow: 0 2px 8px #e5e7eb; margin: auto;
-  }
-  .nav-bg {
-      background: #fff; border-bottom: 1px solid #e5e7eb;
-      backdrop-filter: blur(4px);
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio de Dados | Jéssica Gambôa />
+  <title>Portfólio de Dados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f7f7f8;
+      color: #23272a;
+      margin: 0;
+    }
+    .container {
+      max-width: 620px;
+      margin: 40px auto 0 auto;
+      padding: 24px 16px;
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(36,42,46,0.07);
+      border-radius: 10px;
+    }
+    .avatar {
+      display: block;
+      margin: 0 auto 16px auto;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    p.bio {
+      text-align: center;
+      color: #575a5e;
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 24px 0;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 18px 0 12px;
+      color: #23272a;
+      letter-spacing: 0.03em;
+    }
+    ul.projects {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.projects li {
+      margin-bottom: 12px;
+      border-left: 3px solid #6366f1;
+      padding-left: 12px;
+      background: #f0f2f5;
+      border-radius: 5px;
+    }
+    a {
+      color: #6366f1;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .contact {
+      text-align: center;
+      margin-top: 20px;
+      color: #23272a;
+      font-size: 1rem;
+    }
+    .skills {
+      font-size: 0.98rem;
+      background: #f0f2f5;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      color: #36404a;
+    }
+    .softskills {
+      color: #5b626b;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.97rem;
+      color: #909197;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-zinc-800">
-
-<nav class="nav-bg fixed top-0 w-full z-50">
-    <div class="max-w-4xl mx-auto flex justify-between items-center py-4 px-4">
-        <span class="font-semibold text-lg">Portfólio</span>
-        <div class="space-x-6 hidden md:block">
-            <a href="#about" class="link-minimal">Sobre</a>
-            <a href="#projects" class="link-minimal">Projetos</a>
-            <a href="#skills" class="link-minimal">Habilidades</a>
-            <a href="#contact" class="link-minimal">Contato</a>
-        </div>
-    </div>
-</nav>
-
-<main class="max-w-3xl mx-auto pt-28 pb-12 px-4">
-  <!-- Hero -->
-  <section class="bg-hero text-center mb-10">
-    <img src="images/perfil.JPG" alt="[Foto de Jéssica Gambôa Cavalcante sorrindo]" class="avatar mb-4" />
-    <h1 class="text-3xl font-semibold mb-2">Jéssica Gambôa Cavalcante</h1>
-    <p class="text-zinc-600 mb-4">Estudante de Data Science na FIAP</p>
-    <div class="flex justify-center gap-4 mb-4">
-      <a href="https://github.com/jessystem" target="_blank" aria-label="GitHub" class="link-minimal"><i class="fab fa-github text-xl"></i></a>
-      <a href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank" aria-label="LinkedIn" class="link-minimal"><i class="fab fa-linkedin text-xl"></i></a>
-      <a href="mailto:jessicagambs@outlook.com" class="link-minimal"><i class="fas fa-envelope text-xl"></i></a>
-    </div>
-  </section>
-
-  <!-- Sobre Mim -->
-  <section id="about" class="mb-10">
-    <h2 class="text-2xl section-title font-semibold mb-2">Sobre</h2>
-    <p class="text-zinc-700 leading-relaxed">
-      Em transição de carreira da área administrativa para Ciência de Dados. Apaixonada por descobrir valor através dos dados. Experiência prévia em administração, agora focada em análise de dados, visualização e machine learning.
+<body>
+  <div class="container">
+    <img class="avatar" src="images/perfil.JPG" alt="Sua Foto">
+    <h1>Jéssica Gambôa Cavalcante</h1>
+    <p class="bio">Estudante de Data Science na FIAP. Ex-administrativa, apaixonada pela resolução de problemas e pela geração de valor através dos dados.</p>
+    <hr>
+    
+    <div class="section-title">Sobre Mim</div>
+    <p>
+      Estou migrando da área administrativa (6+ anos) para a Ciência de Dados, concentrando minha formação em análise, visualização e machine learning.<br><br>
+      Atualmente, curso o segundo semestre de Ciência de Dados na FIAP, e busco unir minha experiência de negócios à técnica para agregar valor às empresas.
     </p>
-  </section>
-
-  <!-- Projetos -->
-  <section id="projects" class="mb-10">
-    <h2 class="text-2xl section-title font-semibold mb-2">Projetos</h2>
-    <ul class="space-y-2">
+    <div class="skills">
+      <strong>Linguagens:</strong> Python (análise), SQL (extração)<br>
+      <strong>Ferramentas:</strong> ETL, Bancos de Dados<br>
+      <strong>Framework:</strong> Pandas, Scikit-learn, Streamlit
+    </div>
+    <div class="softskills">
+      Soft skills: resiliência, organização, pensamento crítico, comunicação, resolução de problemas.
+    </div>
+    <hr>
+    
+    <div class="section-title">Projetos em Destaque</div>
+    <ul class="projects">
       <li>
-        <a class="link-minimal" href="https://github.com/jessystem/analise_covid" target="_blank">
-          Análise de Dados COVID-19 (FIAP)
+        <a href="https://github.com/jessystem/analise_covid" target="_blank">
+          Análise COVID-19 – Estatística, FIAP
         </a>
       </li>
       <li>
-        <a class="link-minimal" href="https://github.com/jessystem/GS_FINAL" target="_blank">
-          Global Solutions: Desastres e Fake News
+        <a href="https://github.com/jessystem/GS_FINAL" target="_blank">
+          Global Solutions: Desastres & Fake News
         </a>
       </li>
       <li>
-        <a class="link-minimal" href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" target="_blank">
-          Clickbus Final FIAP 2025
+        <a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" target="_blank">
+          Clickbus Final FIAP 2025 (Time Series)
         </a>
       </li>
     </ul>
-  </section>
-  
-  <!-- Habilidades -->
-  <section id="skills" class="mb-10">
-    <h2 class="text-2xl section-title font-semibold mb-2">Habilidades Técnicas</h2>
-    <ul class="grid grid-cols-2 gap-2 text-zinc-700 text-sm">
-      <li>Python</li>
-      <li>Pandas & NumPy</li>
-      <li>SQL</li>
-      <li>Scikit-learn</li>
-      <li>Looker Studio</li>
-      <li>SQLITE, Oracle</li>
-      <li>Análise Estatística</li>
-      <li>Storytelling & Comunicação</li>
-    </ul>
-  </section>
-
-  <!-- Contato -->
-  <section id="contact" class="mb-10">
-    <h2 class="text-2xl section-title font-semibold mb-2">Contato</h2>
-    <p class="text-zinc-700 mb-2">Email: <a class="link-minimal" href="mailto:jessicagambs@outlook.com">jessicagambs@outlook.com</a></p>
-    <p class="text-zinc-700">São Paulo, Brasil</p>
-  </section>
-</main>
-
-<footer class="bg-white text-zinc-400 py-4 text-xs text-center border-t minimal-border">
-  &copy; 2024 Jéssica Gambôa Cavalcante. Dados & Simplicidade.
-</footer>
-
-<!-- Fontawesome (apenas ícones usados) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <hr>
+    
+    <div class="section-title">Contato</div>
+    <div class="contact">
+      <div>Email: <a href="mailto:jessicagambs@outlook.com">jessicagambs@outlook.com</a></div>
+      <div>LinkedIn: <a href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank">jessicagamboacavalcante</a></div>
+      <div>GitHub: <a href="https://github.com/jessystem" target="_blank">jessystem</a></div>
+      <div>Localização: São Paulo, Brasil</div>
+    </div>
+    <div class="footer">
+      &copy; 2025 Jéssica Gambôa Cavalcante • Portfólio de Dados
+    </div>
+  </div>
 </body>
 </html>
