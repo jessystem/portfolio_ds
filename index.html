@@ -1,156 +1,203 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfólio de Dados | Jéssica Gambôa />
-  <title>Portfólio de Dados</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f7f7f8;
-      color: #23272a;
-      margin: 0;
-    }
-    .container {
-      max-width: 620px;
-      margin: 40px auto 0 auto;
-      padding: 24px 16px;
-      background: #fff;
-      box-shadow: 0 2px 12px rgba(36,42,46,0.07);
-      border-radius: 10px;
-    }
-    .avatar {
-      display: block;
-      margin: 0 auto 16px auto;
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    p.bio {
-      text-align: center;
-      color: #575a5e;
-      font-size: 1.1rem;
-      margin-bottom: 18px;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #e5e7eb;
-      margin: 24px 0;
-    }
-    .section-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin: 18px 0 12px;
-      color: #23272a;
-      letter-spacing: 0.03em;
-    }
-    ul.projects {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    ul.projects li {
-      margin-bottom: 12px;
-      border-left: 3px solid #6366f1;
-      padding-left: 12px;
-      background: #f0f2f5;
-      border-radius: 5px;
-    }
-    a {
-      color: #6366f1;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover { text-decoration: underline; }
-    .contact {
-      text-align: center;
-      margin-top: 20px;
-      color: #23272a;
-      font-size: 1rem;
-    }
-    .skills {
-      font-size: 0.98rem;
-      background: #f0f2f5;
-      border-radius: 6px;
-      padding: 12px 16px;
-      margin-bottom: 16px;
-      color: #36404a;
-    }
-    .softskills {
-      color: #5b626b;
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-    }
-    .footer {
-      text-align: center;
-      font-size: 0.97rem;
-      color: #909197;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <img class="avatar" src="images/perfil.JPG" alt="Sua Foto">
-    <h1>Jéssica Gambôa Cavalcante</h1>
-    <p class="bio">Estudante de Data Science na FIAP. Ex-administrativa, apaixonada pela resolução de problemas e pela geração de valor através dos dados.</p>
-    <hr>
-    
-    <div class="section-title">Sobre Mim</div>
-    <p>
-      Estou migrando da área administrativa (6+ anos) para a Ciência de Dados, concentrando minha formação em análise, visualização e machine learning.<br><br>
-      Atualmente, curso o segundo semestre de Ciência de Dados na FIAP, e busco unir minha experiência de negócios à técnica para agregar valor às empresas.
-    </p>
-    <div class="skills">
-      <strong>Linguagens:</strong> Python (análise), SQL (extração)<br>
-      <strong>Ferramentas:</strong> ETL, Bancos de Dados<br>
-      <strong>Framework:</strong> Pandas, Scikit-learn, Streamlit
-    </div>
-    <div class="softskills">
-      Soft skills: resiliência, organização, pensamento crítico, comunicação, resolução de problemas.
-    </div>
-    <hr>
-    
-    <div class="section-title">Projetos em Destaque</div>
-    <ul class="projects">
-      <li>
-        <a href="https://github.com/jessystem/analise_covid" target="_blank">
-          Análise COVID-19 – Estatística, FIAP
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/jessystem/GS_FINAL" target="_blank">
-          Global Solutions: Desastres & Fake News
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" target="_blank">
-          Clickbus Final FIAP 2025 (Time Series)
-        </a>
-      </li>
-    </ul>
-    <hr>
-    
-    <div class="section-title">Contato</div>
-    <div class="contact">
-      <div>Email: <a href="mailto:jessicagambs@outlook.com">jessicagambs@outlook.com</a></div>
-      <div>LinkedIn: <a href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank">jessicagamboacavalcante</a></div>
-      <div>GitHub: <a href="https://github.com/jessystem" target="_blank">jessystem</a></div>
-      <div>Localização: São Paulo, Brasil</div>
-    </div>
-    <div class="footer">
-      &copy; 2025 Jéssica Gambôa Cavalcante • Portfólio de Dados
-    </div>
-  </div>
-</body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portfólio DS Jéssica Gambôa Cavalcante</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<!-- Header -->
+					<header id="header">
+						<a class="logo"><strong>Portfólio </strong> de Jéssica Gambôa Cavalcante</a>
+						<ul class="icons">
+							<li><a href="mailto:jessicagambs@outlook.com" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a></li>
+							<li><a href="https://linkedin.com/in/jessicagamboacavalcante" class="icon brands fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://github.com/jessystem" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+						</ul>
+					</header>
+
+					<!-- Saudação -->
+					<section id="main">
+						<div class="content">
+							<header>
+								<span class="image right">
+									<img class="img-profile" src="images/perfil.JPG" alt="Foto de Jessica Gambôa Cavalcante" />
+								</span>
+								<h1>Bem-vindo ao meu portfólio em Ciência de Dados.</h1>
+							</header>
+							<p>
+								Nesta página, demonstro minhas habilidades em resolver problemas reais de negócio usando técnicas de Ciência de Dados, apresentando projetos e soluções construídas sobre dados públicos e desafios do mercado[attached_file:1].
+							</p>
+							<header class="main">
+								<h2>Sobre mim</h2>
+							</header>
+							<h3 id="content">Me chamo Jéssica Gambôa Cavalcante</h3>
+							<p>
+								Estou em transição de carreira da área administrativa (6+ anos de experiência) para o universo da Ciência de Dados.<br>
+								Sou estudante do 2º semestre de Data Science na FIAP. Busco aplicar minha bagagem administrativa, junto das novas habilidades técnicas em análise, visualização e Machine Learning, para gerar valor às empresas.<br>
+								A tecnologia e os dados sempre me motivaram a aprender cada vez mais sobre análise, visualização e automação de soluções.<br>
+								<b>Tenho como objetivo trabalhar profissionalmente como Cientista de Dados, ajudando empresas a tomarem decisões mais inteligentes e gerar impacto com dados.</b>
+							</p>
+						</div>
+					</section>
+
+					<!-- Habilidades -->
+					<section>
+						<header class="major">
+							<h2>Habilidades Técnicas</h2>
+						</header>
+						<div class="features">
+							<article>
+								<span class="icon solid fa-code"></span>
+								<div class="content">
+									<h3>Linguagens de Programação & Banco de Dados</h3>
+									<ul>
+										<li>Python (Análise de dados, automação)</li>
+										<li>SQL (Extração e manipulação)</li>
+										<li>Conceitos de ETL</li>
+										<li>Pensamento estratégico</li>
+									</ul>
+								</div>
+							</article>
+							<article>
+								<span class="icon solid fa-chart-bar"></span>
+								<div class="content">
+									<h3>Visualização de Dados</h3>
+									<ul>
+										<li>Looker Studio</li>
+										<li>Streamlit</li>
+										<li>Matplotlib, Seaborn, Plotly</li>
+									</ul>
+								</div>
+							</article>
+							<article>
+								<span class="icon solid fa-calculator"></span>
+								<div class="content">
+									<h3>Estatística</h3>
+									<ul>
+										<li>Descritiva e Exploratória</li>
+										<li>KPIs, Métricas de performance</li>
+										<li>Feature engineering</li>
+									</ul>
+								</div>
+							</article>
+							<article>
+								<span class="icon solid fa-robot"></span>
+								<div class="content">
+									<h3>Machine Learning</h3>
+									<ul>
+										<li>Algoritmos de regressão e classificação</li>
+										<li>Scikit-learn, XGBoost, LGBM</li>
+										<li>Pré-processamento com Sklearn</li>
+										<li>Tuning e validação de modelos</li>
+									</ul>
+								</div>
+							</article>
+							<article>
+								<span class="icon solid fa-cloud"></span>
+								<div class="content">
+									<h3>Engenharia & Deploy</h3>
+									<ul>
+										<li>Render Cloud, Streamlit Cloud</li>
+										<li>APIs em Python</li>
+										<li>GitHub, Versionamento</li>
+									</ul>
+								</div>
+							</article>
+							<article>
+								<span class="icon solid fa-cogs"></span>
+								<div class="content">
+									<h3>Outras Competências</h3>
+									<ul>
+										<li>Excel, PowerPoint, VSCode, Jupyter</li>
+										<li>Comunicação, Resolução de problemas</li>
+										<li>Inglês intermediário (B1)</li>
+									</ul>
+								</div>
+							</article>
+						</div>
+					</section>
+
+					<!-- Experiência -->
+					<section>
+						<header class="main">
+							<h1>Experiências Profissionais</h1>
+						</header>
+						<h2 id="content">Projetos em Ciência de Dados</h2>
+						<p>
+							Soluções para problemas de negócio usando dados públicos de competições, aplicando todas as etapas do ciclo CRISP-DM: coleta, ETL, análise estatística, feature engineering, modelagem, fine tuning, deploy em cloud, entregando valor e aprendizado contínuo[attached_file:1].
+						</p>
+						<h2 id="content">Experiência administrativa</h2>
+						<p>
+							6+ anos na área, controle de processos e equipes, desenvolvimento de soft skills essenciais: agilidade, resiliência, organização, capacidade lógica, senso crítico e resolução de problemas[attached_file:1].
+						</p>
+					</section>
+
+					<!-- Projetos -->
+					<section>
+						<header class="major">
+							<h1>Projetos em Destaque</h1>
+						</header>
+						<div class="posts">
+							<article>
+								<a href="https://github.com/jessystem/analise_covid" class="image" target="_blank"><img src="images/covid19.png" alt="" /></a>
+								<h3>Análise COVID-19</h3>
+								<p>
+									Projeto estatístico do 1º semestre na FIAP, analisando dados públicos de pandemia, com tratamento, visualização e conclusões relevantes para políticas públicas.
+								</p>
+								<ul class="actions">
+									<li><a href="https://github.com/jessystem/analise_covid" class="button" target="_blank">SAIBA MAIS</a></li>
+								</ul>
+							</article>
+							<article>
+								<a href="https://github.com/jessystem/GS_FINAL" class="image" target="_blank"><img src="images/gsfinal.png" alt="" /></a>
+								<h3>Global Solutions: Fake News e Desastres</h3>
+								<p>
+									Projeto multidisciplinar envolvendo análise de desastres urbanos em São Paulo e combate à desinformação, do ciclo completo do projeto à apresentação de resultados[attached_file:1].
+								</p>
+								<ul class="actions">
+									<li><a href="https://github.com/jessystem/GS_FINAL" class="button" target="_blank">SAIBA MAIS</a></li>
+								</ul>
+							</article>
+							<article>
+								<a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" class="image" target="_blank"><img src="images/clickbus.png" alt="" /></a>
+								<h3>Clickbus - Previsão de vendas Time Series</h3>
+								<p>
+									Machine learning para previsão de vendas de uma plataforma de transporte rodoviário, deploy do modelo, automações e acompanhamento de métricas via API/Cloud[attached_file:1].
+								</p>
+								<ul class="actions">
+									<li><a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" class="button" target="_blank">SAIBA MAIS</a></li>
+								</ul>
+							</article>
+						</div>
+					</section>
+
+					<!-- Contato-->
+					<section class="contact">
+						<header class="major">
+							<h2>Contatos</h2>
+						</header>
+						<p>Sinta-se à vontade para entrar em contato:</p>
+						<ul class="contact">
+							<li><a class="icon solid fa-envelope" href="mailto:jessicagambs@outlook.com" target="_blank"></a></li>
+							<li><a class="icon brands fa-linkedin" href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank"></a></li>
+							<li><a class="icon brands fa-github" href="https://github.com/jessystem" target="_blank"></a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
 </html>
