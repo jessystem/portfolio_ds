@@ -1,227 +1,156 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Portfólio DS Jéssica Gambôa Cavalcante</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/style.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jéssica Gambôa | Ciência de Dados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .section {
+      padding: 4rem 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+    .title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+    .progress {
+      height: 0.5rem;
+      background: #e5e5e5;
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #7c3aed;
+      animation: growBar 1.5s ease-out forwards;
+      width: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes growBar {
+      to {
+        width: var(--target-width);
+      }
+    }
+    button {
+      transition: transform 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.02);
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
 
-		<!-- Wrapper -->
-		<div id="wrapper">
-			<!-- Main -->
-			<div id="main">
-				<div class="inner">
+  <!-- Header -->
+  <header class="section text-center">
+    <img src="images/perfil.JPG" alt="Foto de Jéssica" class="w-24 h-24 rounded-full mx-auto mb-4" />
+    <h1 class="text-3xl font-bold">Jéssica Gambôa Cavalcante</h1>
+    <p class="text-gray-600 mt-2">Estudante de Ciência de Dados | FIAP</p>
+    <div class="mt-4 flex justify-center gap-4">
+      <a href="https://github.com/jessystem" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank">LinkedIn</a>
+      <a href="mailto:jessicagambs@outlook.com">Email</a>
+    </div>
+  </header>
 
-					<!-- Header -->
-					<header id="header">
-						<a class="logo"><strong>Portfólio </strong> de Jéssica Gambôa Cavalcante</a>
-						<ul class="icons">
-							<li><a href="mailto:jessicagambs@outlook.com" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a></li>
-							<li><a href="https://linkedin.com/in/jessicagamboacavalcante" class="icon brands fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/jessystem" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
-						</ul>
-					</header>
+  <!-- Sobre Mim -->
+  <section class="section">
+    <h2 class="title">Sobre Mim</h2>
+    <p class="subtitle">Transição da área administrativa para o universo dos dados.</p>
+    <div class="max-w-3xl mx-auto text-center text-gray-700">
+      <p>Sou apaixonada por tecnologia e pelo poder dos dados. Após 6 anos na área administrativa, decidi migrar para Ciência de Dados, onde posso unir minha experiência com novas habilidades analíticas.</p>
+    </div>
+  </section>
 
-					<!-- Saudação -->
-					<section id="main">
-						<div class="content">
-							<header>
-								<span class="image right">
-									<img class="img-profile" src="images/perfil.JPG" alt="Foto de Jéssica Gambôa Cavalcante" />
-								</span>
-								<h1>Bem-vindo ao meu portfólio de projetos em Ciência de Dados.</h1>
-							</header>
-							<p>Nesta página, demonstro minhas habilidades de resolver problemas reais de negócio utilizando conceitos e ferramentas da Ciência de Dados, através de projetos com dados públicos.</p>
-							<header class="main">
-								<h2>Sobre mim</h2>
-							</header>
-							<h3 id="content">Me chamo Jéssica Gambôa Cavalcante</h3>
-							<p>Sou graduanda em Data Science (FIAP), atualmente em transição de carreira após mais de 6 anos na área administrativa.
-							Tenho paixão por tecnologia, análise de dados, visualização e machine learning, sempre motivada a aprender e transformar dados em soluções que agregam valor real para organizações.<br>
-							<b>Meu objetivo é atuar como Cientista de Dados, promovendo decisões inteligentes e resultados de impacto com dados.</b></p>
-						</div>
-					</section>
+  <!-- Projetos -->
+  <section class="section bg-white">
+    <h2 class="title">Projetos</h2>
+    <div class="grid gap-6 max-w-3xl mx-auto">
+      <div class="card">
+        <a href="https://github.com/jessystem/analise_covid" target="_blank" class="text-purple-600 font-semibold">Análise COVID-19 — Estatística FIAP</a>
+      </div>
+      <div class="card">
+        <a href="https://github.com/jessystem/GS_FINAL" target="_blank" class="text-purple-600 font-semibold">Global Solutions — Fake News & Desastres SP</a>
+      </div>
+      <div class="card">
+        <a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" target="_blank" class="text-purple-600 font-semibold">Clickbus — Projeto Final 2º Semestre</a>
+      </div>
+    </div>
+  </section>
 
-					<!-- Habilidades -->
-					<section>
-						<header class="major">
-							<h2>Habilidades</h2>
-						</header>
-						<div class="features">
-							<article>
-								<span class="icon solid fa-code"></span>
-								<div class="content">
-									<h3>Linguagens de Programação e Banco de Dados</h3>
-									<ul>
-										<li>Python com foco em análise de dados</li>
-										<li>Pensamento estratégico</li>
-										<li>Conceitos de ETL</li>
-										<li>SQL para extração de dados</li>
-									</ul>
-								</div>
-							</article>
-							<article>
-								<span class="icon solid fa-chart-bar"></span>
-								<div class="content">
-									<h3>Visualização de Dados</h3>
-									<ul>
-										<li>Looker Studio</li>
-										<li>Streamlit</li>
-										<li>Matplotlib, Seaborn e Plotly</li>
-									</ul>
-								</div>
-							</article>
-							<article>
-								<span class="icon solid fa-calculator"></span>
-								<div class="content">
-									<h3>Estatística</h3>
-									<ul>
-										<li>Estatística descritiva (dispersão, kurtosis, densidade)</li>
-										<li>Análise exploratória de dados (EDA)</li>
-										<li>Métricas de performance (RMSE, MAE, MAPE, Confusion Matrix, Precisão, Recall, F1-score, Curva ROC)</li>
-									</ul>
-								</div>
-							</article>
-							<article>
-								<span class="icon solid fa-robot"></span>
-								<div class="content">
-									<h3>Machine Learning</h3>
-									<ul>
-										<li>Algoritmos de regressão e classificação (Random Forest, XGBoost, LGBM)</li>
-										<li>Scikit-learn, Scipy</li>
-										<li>Pré-processamento (RobustScaler, MinMaxScaler, StandardScaler, LabelEncoder, One Hot Encoding)</li>
-									</ul>
-								</div>
-							</article>
-							<article>
-								<span class="icon solid fa-cloud"></span>
-								<div class="content">
-									<h3>Engenharia de Software</h3>
-									<ul>
-										<li>Github, Gitbash</li>
-										<li>Streamlit Cloud, Render Cloud</li>
-										<li>Streamlit, Flask, APIs em Python</li>
-									</ul>
-								</div>
-							</article>
-							<article>
-								<span class="icon solid fa-cogs"></span>
-								<div class="content">
-									<h3>Outras Ferramentas e Competências</h3>
-									<ul>
-										<li>Excel, PowerPoint, Word</li>
-										<li>VSCode, DBeaver, Pycharm, JupyterNotebook/Lab</li>
-										<li>Inglês intermediário (nível B1)</li>
-									</ul>
-								</div>
-							</article>
-						</div>
-					</section>
+  <!-- Habilidades -->
+  <section class="section">
+    <h2 class="title">Habilidades</h2>
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div class="card">
+        <h3 class="font-semibold mb-2">Python</h3>
+        <div class="progress"><div class="progress-bar" style="--target-width: 90%"></div></div>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold mb-2">SQL</h3>
+        <div class="progress"><div class="progress-bar" style="--target-width: 90%"></div></div>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold mb-2">Pandas & NumPy</h3>
+        <div class="progress"><div class="progress-bar" style="--target-width: 95%"></div></div>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold mb-2">Scikit-learn</h3>
+        <div class="progress"><div class="progress-bar" style="--target-width: 70%"></div></div>
+      </div>
+    </div>
+  </section>
 
-					<!-- Experiência -->
-					<section>
-						<header class="main">
-							<h1>Experiências Profissionais</h1>
-						</header>
-						<h2 id="content">Projetos em Ciência de Dados</h2>
-						<p>
-							Construção de soluções para problemas de negócio próximos da realidade das empresas utilizando dados públicos de competições, seguindo todas as etapas do ciclo CRISP-DM:
-							recepção dos dados, ETL, análise estatística, feature engineering, modelagem, fine-tuning e deploy em cloud. O foco sempre é entregar valor e buscar aprimoramento contínuo. Consulte alguns projetos na seção abaixo.
-						</p>
-						<h2 id="content">Mais de 6 anos de experiência administrativa</h2>
-						<p>
-							Controle de entrada de pacientes, gestão de processos e equipes, resiliência, organização, raciocínio lógico, agilidade, pensamento crítico e habilidade de resolução de problemas.
-						</p>
-						<h2 id="content">Iniciação Científica e Projetos Acadêmicos</h2>
-						<p>
-							Trabalho com coleta e análise desde a graduação, experiência em relatórios científicos, apresentações e aplicação de métodos estatísticos em projetos de pesquisa.
-						</p>
-					</section>
+  <!-- Contato -->
+  <section class="section bg-white">
+    <h2 class="title">Contato</h2>
+    <div class="max-w-xl mx-auto text-center">
+      <p class="mb-4">📍 São Paulo, Brasil</p>
+      <p class="mb-4">📧 <a href="mailto:jessicagambs@outlook.com" class="text-purple-600">jessicagambs@outlook.com</a></p>
+      <p class="mb-4">📞 <a href="tel:+5511959372102" class="text-purple-600">+55 (11) 95937-2102</a></p>
+    </div>
+  </section>
 
-					<!-- Projetos -->
-					<section>
-						<header class="major">
-							<h1>Projetos em Ciência de Dados</h1>
-						</header>
-						<div class="posts">
-							<article>
-								<a href="https://github.com/jessystem/analise_covid" class="image" target="_blank"><img src="images/covid19.png" alt="" /></a>
-								<h3>Análise COVID-19 – Estatística (FIAP)</h3>
-								<p>
-									Projeto de análise estatística da pandemia no 1º semestre da FIAP, com tratamento, visualização dos dados e insights para saúde pública. 
-								</p>
-								<h4>Ferramentas Utilizadas</h4>
-								<ul>
-									<li>Python (Pandas, Numpy, Matplotlib, Sklearn, Plotly, Seaborn)</li>
-									<li>Jupyter Notebook / VSCode</li>
-									<li>GitHub</li>
-								</ul>
-								<ul class="actions">
-									<li><a href="https://github.com/jessystem/analise_covid" class="button" target="_blank">SAIBA MAIS</a></li>
-								</ul>
-							</article>
-							<article>
-								<a href="https://github.com/jessystem/GS_FINAL" class="image" target="_blank"><img src="images/gsfinal.png" alt="" /></a>
-								<h3>Global Solutions: Desastres & Fake News</h3>
-								<p>
-									Projeto interdisciplinar, análise de desastres urbanos e combate à desinformação em São Paulo. Inclui pipeline completo, desde coleta até apresentação dos resultados.
-								</p>
-								<h4>Ferramentas Utilizadas</h4>
-								<ul>
-									<li>Python, Pandas, Sklearn</li>
-									<li>PowerPoint, GitHub</li>
-								</ul>
-								<ul class="actions">
-									<li><a href="https://github.com/jessystem/GS_FINAL" class="button" target="_blank">SAIBA MAIS</a></li>
-								</ul>
-							</article>
-							<article>
-								<a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" class="image" target="_blank"><img src="images/clickbus.png" alt="" /></a>
-								<h3>Clickbus Final FIAP 2025 – Previsão de Vendas</h3>
-								<p>
-									Modelo de Machine Learning para previsão de vendas (Time Series), deploy em cloud e acompanhamento dos resultados via automação e API.
-								</p>
-								<h4>Ferramentas Utilizadas</h4>
-								<ul>
-									<li>Python, Pandas, Numpy, Scikit-learn, Jupyter Notebook, APIs, GitHub</li>
-								</ul>
-								<ul class="actions">
-									<li><a href="https://github.com/jessystem/Clickbus_final_fiap2025_2semestre" class="button" target="_blank">SAIBA MAIS</a></li>
-								</ul>
-							</article>
-							<!-- Para projetos futuros, adicionar mais <article> como modelo -->
-						</div>
-					</section>
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm">
+    &copy; 2024 Jéssica Gambôa. Feito com 💜 e dados.
+  </footer>
 
-					<!-- Contato-->
-					<section class="contact">
-						<header class="major">
-							<h2>Contatos</h2>
-						</header>
-						<p>Sinta-se à vontade para entrar em contato:</p>
-						<ul class="contact">
-							<li><a class="icon solid fa-envelope" href="mailto:jessicagambs@outlook.com" target="_blank"></a></li>
-							<li><a class="icon brands fa-linkedin" href="https://linkedin.com/in/jessicagamboacavalcante" target="_blank"></a></li>
-							<li><a class="icon brands fa-github" href="https://github.com/jessystem" target="_blank"></a></li>
-						</ul>
-					</section>
-				</div>
-			</div>
-		</div>
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+</body>
 </html>
